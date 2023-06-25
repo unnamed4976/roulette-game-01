@@ -1,0 +1,44 @@
+'use strict';
+
+{
+
+  // let num = document.getElementById('input');
+  // let Num = document.querySelector('input');
+  
+  let select = document.querySelector('select');
+  let button = document.querySelector('button');
+  let dice = document.getElementById('dice');
+  let result = document.getElementById('result');
+  let money = document.getElementById('money');
+  let game = document.getElementById('game');
+  // 初期値
+  let n = 100;
+
+  document.querySelector('button').addEventListener('click', () => {
+    let num = Math.floor(Math.random() * 3) + 1;
+    // console.log(num);
+    // console.log(select.value);
+    dice.textContent = `ルーレットの数字は、${num}です。`;
+    if(num == select.value){
+      // console.log('当たり');
+      n = n + 20;
+      result.textContent = '結果は、当たり。';
+    }else{
+      // console.log('はずれ');
+      n = n - 10;
+      result.textContent = '結果は、はずれ。'; 
+    }
+    money.textContent = `持ち金${n}円`;
+
+    if(n > 199){
+      game.textContent = 'ゲームクリア！';
+      button.classList.add('inactive')
+    } 
+    if(n < 1) {
+      game.textContent = 'ゲームオーバー！';
+      button.classList.add('inactive')
+    }
+    
+    });
+
+}

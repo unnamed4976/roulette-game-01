@@ -1,0 +1,69 @@
+@charset "utf-8";
+
+body {
+  background: lightblue;
+}
+
+.inactive {
+display: none;
+}
+
+.container {
+  width: 400px;
+  margin: 60px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+p {
+  font-size: 30px;
+}
+
+#money {
+  font-size: 30px;
+}
+
+.font {
+  font-size: 30px;
+}
+
+#dice {
+  font-size: 30px;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  background: blue;
+  color: white; 
+  width: 90px; 
+  margin: 0 auto; 
+}
+
+button:hover {
+  opacity: .7;
+}
+
+button:active {
+  opacity: .4;
+}
+
+.ad {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.twi {
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+}
+
